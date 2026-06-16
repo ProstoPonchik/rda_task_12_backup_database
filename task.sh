@@ -20,7 +20,7 @@ if ! command -v mysql > /dev/null; then
 fi
 
 mysqldump -u "$DB_USER" -p"$DB_PASSWORD" ShopDB --result-file=ShopDB.sql
-mysql -u "$DB_USER" -p"$DB_PASSWORD" ShopDBReverse < ShopDB.sql
+mysql -u "$DB_USER" -p"$DB_PASSWORD" ShopDBReserve < ShopDB.sql
 
 #only data dump for shopdbdevelopment
 mysqldump -u "$DB_USER" -p"$DB_PASSWORD" ShopDB --no-create-info --result-file=ShopDBDevelopment.sql
